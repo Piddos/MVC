@@ -39,8 +39,11 @@
 
         <div class="row-fluid">
             <div class="span12 search">
-                <form>
-                    <input type="text" class="span11" placeholder="Some text for search..." name="search"/>
+                <form action="index.php" method="GET">
+                    <input type="hidden" name="controller" value="product">
+                    <input type="hidden" name="action" value="show">
+                    <input type="hidden" name="page" value="1">
+                    <input type="text" class="span11" placeholder="Some text for search..." name="search">
                     <button class="btn span1" type="submit">Search</button>
                 </form>
             </div>
@@ -58,6 +61,7 @@
                 </div>
                 <div class="block-fluid table-sorting">
                     <a href="index.php?controller=product&action=add_product" class="btn btn-add">Add Product</a>
+                    <form action="index.php?controller=product&action=box" method="POST">
                     <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tSortable_2">
                         <thead>
                         <tr>
@@ -77,8 +81,11 @@
                         ?>
                     </table>
                     <div class="bulk-action">
-                        <a href="#" class="btn btn-success">Activate</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <input type="hidden" name="table" value="products">
+                        <input type="submit" name="activate" value="Activate" class="btn btn-success">
+                        <input type="submit" name="delete" value="Delete" class="btn btn-danger">
+                        <input type="submit" name="deactivate" value="Deactivate" class="btn btn-danger">
+                    </form>
                     </div><!-- /bulk-action-->
                     <?php
                         include "incfiles/paginate.php";

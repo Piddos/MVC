@@ -51,17 +51,17 @@
                     <form action="index.php?controller=product&action=show&page=1" method="POST">
                     	<div class="row-form">
                             <div class="span3">Product Name:</div>
-                            <div class="span9"><input type="text" placeholder="some text value..."/></div>
+                            <div class="span9"><input type="text" name="product_name" value="<?php echo $product_name; ?>"></div>
                             <div class="clear"></div>
                         </div> 
                     	<div class="row-form">
                             <div class="span3">Price:</div>
-                            <div class="span9"><input type="text" placeholder="some text value..."/></div>
+                            <div class="span9"><input type="text" name="price" value="<?php echo $price; ?>"></div>
                             <div class="clear"></div>
                         </div> 
                     	<div class="row-form">
                             <div class="span3">Description:</div>
-                            <div class="span9"><textarea name="textarea" placeholder="Textarea field placeholder..."></textarea></div>
+                            <div class="span9"><textarea name="details"><?php echo $details; ?></textarea></div>
                             <div class="clear"></div>
                         </div> 
                     	<div class="row-form">

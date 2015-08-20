@@ -31,7 +31,7 @@ class Product extends Base
 		'product_name' => $this->model->get_an_element("products", "product_name", $_GET['id']),
 		'price'=> $this->model->get_an_element("products", "price", $_GET['id']) ,
 		'details'=> $this->model->get_an_element("products", "details", $_GET['id']));
-
+		//
 		self::view('edit-product', $contain);
 	}
 

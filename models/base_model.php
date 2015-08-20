@@ -65,6 +65,7 @@
 				return $element;
 			} else return 0;
 		}
+
 		
 		public function get_num_rows($table, $limit){
 			$sql = "SELECT id FROM $table ORDER BY id ";
